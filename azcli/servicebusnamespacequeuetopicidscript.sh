@@ -1,6 +1,6 @@
 #!/bin/bash
 
-subscription_id="<<PLACE YOUR SUBSCRIPTION ID HERE>>"
+subscription_id="<<INSERT YOUR SUBSCRIPTION ID HERE>>"
 az account set --subscription "$subscription_id"
 
 apps=$(az resource list --subscription "$subscription_id" --resource-type "Microsoft.Web/sites" --query "[].{name:name, resourceGroup:resourceGroup}" -o json)
